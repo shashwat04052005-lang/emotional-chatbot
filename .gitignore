@@ -1,0 +1,27 @@
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Generated models and vector data
+.chroma_cache/
+chroma_db/
+
+# Source books are local-only and may be copyrighted
+data/
+*.pdf
+
+# Streamlit and editor-local files
+.streamlit/secrets.toml
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
