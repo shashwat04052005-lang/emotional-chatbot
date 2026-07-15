@@ -9,9 +9,8 @@ venv/
 __pycache__/
 *.py[cod]
 
-# Generated models and vector data
+# Generated model cache
 .chroma_cache/
-chroma_db/
 
 # Source books are local-only and may be copyrighted
 data/

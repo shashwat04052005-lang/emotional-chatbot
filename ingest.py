@@ -23,6 +23,13 @@ print(f"Created {len(chunks)} chunks.")
 print("Generating local ONNX embeddings (all-MiniLM-L6-v2)...")
 embeddings = ChromaMiniLMEmbeddings()
 
+# Rebuild the collection instead of appending duplicate chunks on every run.
+existing_store = Chroma(
+    persist_directory="./chroma_db",
+    embedding_function=embeddings,
+)
+existing_store.delete_collection()
+
 vector_store = Chroma.from_documents(
     documents=chunks, 
     embedding=embeddings, 
